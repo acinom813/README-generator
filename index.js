@@ -33,8 +33,9 @@ inquirer.prompt ([                                                //insert array
     name:'tests'
 },
 {
-    type:'list'
-    message:'Select a license for your application'
+    type:'list',
+    message:'Select a license for your application',
+    choices: ,
     name: []
 },
 {
@@ -52,10 +53,14 @@ inquirer.prompt ([                                                //insert array
     const content = `
 # ${response.name}
 
-##
+## ${response.description}
     
-###
-
+## Table of Contents
+*[Installation]
+*[Usage]
+*[Contributing]
+*[Tests]
+*[Questions]
 
 ####
     `;
