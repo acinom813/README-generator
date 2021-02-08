@@ -1,31 +1,51 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-inquirer.prompt ([                          //insert array of questions (objects)
+inquirer.prompt ([                                                //insert array of questions (objects)
 {
-    type:
-    message:
-    name:
+    type:'input',                                                //question type is user input
+    message:'What is the title of your project?',                
+    name: 'title'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'Give a description of your project.',
+    name:'description'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'What are the installation instructions?',
+    name:'installation'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'What usage inforamtion would helpful?',
+    name:'usage'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'What are the contribution guidelines?',
+    name:'contributing'
+},
+{
+    type: 'input',
+    message: 'What are the test instructions?',
+    name:'tests'
+},
+{
+    type:'list'
+    message:'Select a license for your application'
+    name: []
+},
+{
+    type:'input',
+    message:'What is your GitHub username?',
+    name:'username'                                          // this will be added to questions section with link to GitHub profile
+},
+{
+    type:'input',
+    message:'What is your email address?',                 // this will be added to questions sections with instructions on how to reach me
+    name:'email'
 },
 
 ]).then(response => {
