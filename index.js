@@ -54,7 +54,7 @@ inquirer.prompt ([
     const content = `
 # ${response.title}
 
-## ${response.description}
+#### ${response.description}
     
 ## Table of Contents
 * [Installation](#installation)
@@ -72,17 +72,17 @@ To install necessary dependencies, run the following command:
 \`\`\`
 ## Usage
 Prior to using this repo, signup for an API key with:
-# ${response.usage}
+#### ${response.usage}
 
 ## Contributing
-# ${response.contributing}
+#### ${response.contributing}
 
 ## Tests
-# ${response.tests}
+#### ${response.tests}
 
 ## License
 The following license is required to run this app:
-# ${response.license}
+#### ${response.license} 
 
 ## Questions
 

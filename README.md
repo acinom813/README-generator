@@ -1,7 +1,7 @@
 
 # Awesome Project
 
-## This project was designed with the user in mind.
+#### This project was designed with the user in mind.
     
 ## Table of Contents
 * [Installation](#installation)
@@ -19,23 +19,23 @@ To install necessary dependencies, run the following command:
 ```
 ## Usage
 Prior to using this repo, signup for an API key with:
-# This app is compatible on Mac and Windows devices
+#### Feel free to access the desired repo.
 
 ## Contributing
-# Contributors must push to gitHub
+#### Each contributor must push to gitHub.
 
 ## Tests
-# Test instuctions have been included
+#### Test folder must be created.
 
 ## License
 The following license is required to run this app:
-# ISC
+#### ISC 
 
 ## Questions
 
-#### acinom813
+#### https://github.com/acinom813
 
 If you have questions regarding the use or functionality of this app, please direct all correspondence to:
-#### monica.hill@gmail.com
+#### monica.r.hill@gmail.com
 
     
