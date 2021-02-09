@@ -1,9 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-inquirer.prompt ([                                                //insert array of questions (objects)
+inquirer.prompt ([                                                
 {
-    type:'input',                                                //question type is user input
+    type:'input',                                                
     message:'What is the title of your project?',                
     name: 'title'
 },
@@ -15,7 +15,8 @@ inquirer.prompt ([                                                //insert array
 {
     type: 'input',
     message: 'What are the installation instructions?',
-    name:'installation'
+    name:'installation',
+    default: ('npm i')
 },
 {
     type: 'input',
@@ -35,39 +36,67 @@ inquirer.prompt ([                                                //insert array
 {
     type:'list',
     message:'Select a license for your application',
-    choices: ,
-    name: []
+    choices:['Apache-2.0', 'MIT', 'ISC', 'AAL'] ,
+    name:'license'
 },
 {
     type:'input',
     message:'What is your GitHub username?',
-    name:'username'                                          // this will be added to questions section with link to GitHub profile
+    name:'username'                                          
 },
 {
     type:'input',
-    message:'What is your email address?',                 // this will be added to questions sections with instructions on how to reach me
+    message:'What is your email address?',                 
     name:'email'
 },
 
-]).then(response => {
+]).then((response) => {
     const content = `
-# ${response.name}
+# ${response.title}
 
 ## ${response.description}
     
 ## Table of Contents
-*[Installation]
-*[Usage]
-*[Contributing]
-*[Tests]
-*[Questions]
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
 
-####
+## Installation
+To install necessary dependencies, run the following command:
+
+\`\`\`
+# ${response.installation}
+\`\`\`
+## Usage
+Prior to using this repo, signup for an API key with:
+# ${response.usage}
+
+## Contributing
+# ${response.contributing}
+
+## Tests
+# ${response.tests}
+
+## License
+The following license is required to run this app:
+# ${response.license}
+
+## Questions
+
+#### ${response.username}
+
+If you have questions regarding the use or functionality of this app, please direct all correspondence to:
+#### ${response.email}
+
     `;
-})
+
 
 fs.writeFile('README.md', content, 
     err => {
         if (err) console.log(err);
         else console.log('success!');
+    })
 });
