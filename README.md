@@ -1,3 +1,8 @@
+Professional README Generator:
+
+Following the command-line application, the README file was constructed to dynamically generate a professional README.md file that required user input. Inquirer packaging was used for the developement of the app. Due to nature of the assignment provided below are the results of the responses populating withing the README file.
+
+
 
 # Awesome Project
 
